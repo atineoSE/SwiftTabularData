@@ -5,7 +5,6 @@
 We can limit the number of rows to load for faster load times and we can select some formatting options to customize the printed output.
  */
 
-
 import Foundation
 import TabularData
 

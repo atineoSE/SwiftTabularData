@@ -5,7 +5,6 @@
 We can load date data into the `Date` type by providing the appropriate parsing options.
  */
 
-
 import Foundation
 import TabularData
 

@@ -5,7 +5,6 @@
 Now that we imported date data as `Date`, we can easily filter for current policies, i.e. policies whose start date is earlier than the current date.
  */
 
-
 import Foundation
 import TabularData
 

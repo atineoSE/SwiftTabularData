@@ -7,7 +7,6 @@ Now that we have filtered by date, we no longer need the start date column.
 To remove it, we must do it over a dataframe, not a dataframe slice. Thus, we need to convert the filtered slice to a full dataframe.
  */
 
-
 import Foundation
 import TabularData
 

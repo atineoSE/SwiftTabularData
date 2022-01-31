@@ -5,7 +5,6 @@
 We can focus on specific columns, indicating them by name.
  */
 
-
 import Foundation
 import TabularData
 
