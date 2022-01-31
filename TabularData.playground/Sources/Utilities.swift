@@ -11,3 +11,5 @@ public func getSwiftVersion() -> String {
     return "lower than 3.0"
     #endif
 }
+
+public let policiesURL = Bundle.main.url(forResource: "Meter_Policies", withExtension: "csv")!
