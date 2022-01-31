@@ -8,7 +8,7 @@
         <page name='Add parse options for strongly typed data'/>
         <page name='Filter results in a dataframe'/>
         <page name='Remove column in a dataframe'/>
-        <page name='Combining columns in a dataframes'/>
+        <page name='Augment data by combining columns'/>
         <page name='Transform columns in a dataframe'/>
         <page name='Grouping results by column value'/>
         <page name='Joining dataframes'/>

@@ -1,6 +1,6 @@
 
 /*:
- ## Combining columns in a data frame
+ ## Augment data by combining columns
  
  We can now load a different data set, with data about location of parking meters.
  
