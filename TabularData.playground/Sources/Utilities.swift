@@ -16,7 +16,7 @@ public func filterPolicies() throws -> DataFrame {
 
     let columns = ["HourlyRate", "DayOfWeek", "StartTime", "EndTime", "StartDate", "PostID"]
 
-    let policies = try DataFrame(contentsOfCSVFile: policiesURL, columns: columns, rows: 0..<100, options: options)
+    let policies = try DataFrame(contentsOfCSVFile: policiesURL, columns: columns, options: options)
     let current = Date()
     var filteredPolicies = DataFrame(policies.filter(on: "StartDate", Date.self) { date in
         guard let date = date else {
