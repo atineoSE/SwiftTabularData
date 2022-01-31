@@ -16,3 +16,9 @@ import TabularData
 let policies = try DataFrame(contentsOfCSVFile: policiesURL)
 
 print(policies)
+
+/*:
+This takes a few seconds and some columns are not displayed. Let's improve that next.
+ 
+  [< Previous](@previous)                            [Next >](@next)
+ */
