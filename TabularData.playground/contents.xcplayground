@@ -10,5 +10,6 @@
         <page name='Remove column in a dataframe'/>
         <page name='Combining columns in a dataframes'/>
         <page name='Transform columns in a dataframe'/>
+        <page name='Grouping results by column value'/>
     </pages>
 </playground>
