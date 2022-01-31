@@ -1,10 +1,10 @@
 
 /*:
- ## Transform columns in a dataframe
+ ## Transforming columns in a dataframe
  
  We can now transform location into distance to build the first feature of the app: locate the nearest parking meters to a given location.
  
- We compute those meters with the `closestParking(to:in:limit:)` function.
+ We obtain those meters with the `closestParking(to:in:limit:)` function.
  
  */
 
@@ -31,7 +31,7 @@ func closestParking(to location: CLLocation, in meters: DataFrame, limit: Int) -
     }
     closesMeters.renameColumn("location", to: "distance")
     
-    // Summary of numerical column
+    // Numerical summary, only for numeric value columns
     print(closesMeters.summary(of: "distance"))
     
     return closesMeters.sorted(on: "distance", order: .ascending)[..<limit]
@@ -41,8 +41,6 @@ let appleStoreLocation = CLLocation(latitude: 37.788675, longitude: -122.407129)
 let myAppleStoreParking = closestParking(to: appleStoreLocation, in: meters, limit: 5)
 
 print(myAppleStoreParking)
-
-
 
 /*:
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='macos' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='Introduction'/>
         <page name='Loading tabular data'/>
         <page name='Tips for easier data exploration'/>
         <page name='Loading specific columns'/>
-        <page name='Add parse options for strongly typed data'/>
-        <page name='Filter results in a dataframe'/>
-        <page name='Remove column in a dataframe'/>
-        <page name='Augment data by combining columns'/>
-        <page name='Transform columns in a dataframe'/>
+        <page name='Adding parse options for strongly typed data'/>
+        <page name='Filtering results in a dataframe'/>
+        <page name='Removing column in a dataframe'/>
+        <page name='Augmenting data by combining columns'/>
+        <page name='Transforming columns in a dataframe'/>
         <page name='Grouping results by column value'/>
         <page name='Joining dataframes'/>
-        <page name='Prevent errors by specifying column type'/>
+        <page name='Preventing errors by specifying column type'/>
     </pages>
 </playground>

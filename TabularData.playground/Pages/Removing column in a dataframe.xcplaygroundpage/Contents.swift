@@ -1,6 +1,6 @@
 
 /*:
- ## Remove column in a dataframe
+ ## Removing column in a dataframe
  
 Now that we have filtered by date, we no longer need the start date column.
  

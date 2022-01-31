@@ -1,8 +1,8 @@
 
 /*:
- ## Filter results in a dataframe
+ ## Adding parse options for strongly typed data
  
-Now that we imported date data as `Date`, we can easily filter for current policies, i.e. policies whose start date is earlier than the current date.
+We can load date data into the `Date` type by providing the appropriate parsing options.
  */
 
 import Foundation
@@ -25,18 +25,12 @@ options.addDateParseStrategy(
 let columns = ["HourlyRate", "DayOfWeek", "StartTime", "EndTime", "StartDate", "PostID"]
 
 let policies = try DataFrame(contentsOfCSVFile: policiesURL, columns: columns, rows: 0..<100, options: options)
-let current = Date()
-let filteredPolicies = policies.filter(on: "StartDate", Date.self) { date in
-    guard let date = date else {
-        return false
-    }
-    return date <= current
-}
-print(filteredPolicies.description(options: formattingOptions))
+
+print(policies.description(options: formattingOptions))
 
 /*:
 
-Now that we have filtered for the slice we want, we can remove unneeded columns next.
+Now dates are imported directly into the `Date` foundation type. This allows us to filter results by date, as we see next.
  
   [< Previous](@previous)                            [Next >](@next)
  */

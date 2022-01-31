@@ -1,7 +1,7 @@
 /*:
  ## Grouping results by column value
  
-We can create the next feature, which is locating the street with the most parking slots, by grouping results by street.
+We can now create the next feature, which is locating the street with the most parking slots, by grouping results by street.
  
  */
 
@@ -19,8 +19,9 @@ let streetMeterCounts = streetGroups.counts(order: .descending)
 print(streetMeterCounts.description(options: formattingOptions))
 
 /*:
+Thus, we obtained the streets with the most parking slots.
  
-We realized that the first feature has a bug, which returned the closest parking meters, since it does not take into account if they have active policies. We will fix that next.
+But we have just realized that the first feature, which returned the closest parking meters, has a bug since it does not take into account if the meters have active policies. We will fix that next.
  
   [< Previous](@previous)                            [Next >](@next)
  */

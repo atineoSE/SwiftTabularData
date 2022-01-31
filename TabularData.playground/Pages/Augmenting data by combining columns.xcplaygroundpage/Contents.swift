@@ -1,14 +1,12 @@
 
 /*:
- ## Augment data by combining columns
+ ## Augmenting data by combining columns
  
  We can now load a different data set, with data about location of parking meters.
  
  The data is again provided by the city of San Francisco and can be found [here](https://data.sfgov.org/Transportation/Parking-Meters/8vzz-qzz9).
  
- Data is provided, as obtained on Jan 31st 2022.
- 
- This data set provides latitude and longitude of the parking meters, which allows us to combine both columns into a new column of type 1 `CLLocation`.
+ This data set provides latitude and longitude of the parking meters, which allows us to combine both columns into a new column of type `CLLocation`.
  
  */
 
@@ -22,7 +20,7 @@ var meters = try DataFrame(
 
 print(meters.description(options: formattingOptions))
 
-// Summary of categorical column
+// Categorical summary, available for any column
 print(meters.summary(of: "STREET_NAME"))
 
 meters.combineColumns("LATITUDE", "LONGITUDE", into: "location") { (latitude: Double?, longitude: Double?) -> CLLocation? in

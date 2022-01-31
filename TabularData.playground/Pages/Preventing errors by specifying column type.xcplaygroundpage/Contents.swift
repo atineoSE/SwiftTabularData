@@ -1,9 +1,9 @@
 /*:
- ## Prevent errors by specifying column type
+ ## Preventing errors by specifying column type
  
-Some values in a dataframe may not be what we expect. It's safest to specify an expected type and handle conversion errors as exceptions.
+Some values in a dataframe may not be what we expect. It's safer to specify an expected type and handle conversion errors as exceptions.
  
-This is a production-ready version of the presented example.
+The following is a production-ready version of the presented example, including checking for expected column types.
  
  */
 
@@ -112,6 +112,7 @@ print(myAppleStoreParking)
 
 /*:
 
+ This concludes the example of the `TabularData` framework.
  
-  [< Previous](@previous)                            [Next >](@next)
+  [< Previous](@previous)
  */

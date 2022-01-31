@@ -39,7 +39,7 @@ let myAppleStoreParking = closestParking(to: appleStoreLocation, in: activeMeter
 print(myAppleStoreParking)
 
 /*:
-
+We could combine information from 2 dataframes to fix the bug. For it we used an inner join, which is the default. Other join options are possible. Check the [documentation](https://developer.apple.com/documentation/tabulardata/joinkind) for further details.
  
   [< Previous](@previous)                            [Next >](@next)
  */

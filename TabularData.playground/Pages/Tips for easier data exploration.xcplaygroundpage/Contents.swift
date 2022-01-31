@@ -2,7 +2,9 @@
 /*:
  ## Tips for easier data exploration
  
-We can limit the number of rows to load for faster load times and we can select some formatting options to customize the printed output.
+Since we are just exploring the data set for now, we can limit the number of rows to load for a faster operation.
+ 
+We can also select some formatting options to customize the printed output.
  */
 
 import Foundation
@@ -20,7 +22,7 @@ print(policies.description(options: formattingOptions))
 
 /*:
 
- This was faster to load and we can see now all columns, let's see how to focus on specific columns next.
+ This was faster to load and we can see now all columns. Let's see how to focus on specific columns next.
  
   [< Previous](@previous)                            [Next >](@next)
  */
