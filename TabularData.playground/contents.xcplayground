@@ -6,5 +6,6 @@
         <page name='Tips for easier data exploration'/>
         <page name='Loading specific columns'/>
         <page name='Add parse options for strongly typed data'/>
+        <page name='Filter results in a dataframe'/>
     </pages>
 </playground>
