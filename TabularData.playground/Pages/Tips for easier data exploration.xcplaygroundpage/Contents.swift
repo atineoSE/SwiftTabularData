@@ -12,8 +12,7 @@ import TabularData
 let formattingOptions = FormattingOptions(
     maximumLineWidth: 250,
     maximumCellWidth: 15,
-    maximumRowCount: 5,
-    includesColumnTypes: true
+    maximumRowCount: 5
 )
 
 let policies = try DataFrame(contentsOfCSVFile: policiesURL, rows: 0..<100)

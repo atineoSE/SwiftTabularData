@@ -4,5 +4,6 @@
         <page name='Introduction'/>
         <page name='Loading tabular data'/>
         <page name='Tips for easier data exploration'/>
+        <page name='Loading specific columns'/>
     </pages>
 </playground>
