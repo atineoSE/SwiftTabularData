@@ -11,6 +11,4 @@
  - 🔍 exploration: what are the values? what are the types? how is the data represented? are there missing values?
  - 🛠 manipulation: transforming the data set to a format better suited to the problem we are trying to solve
  */
-print("This playground was developed using Swift 5.")
-print("You are using Swift version: \(getSwiftVersion())")
 //: [Next](@next)
