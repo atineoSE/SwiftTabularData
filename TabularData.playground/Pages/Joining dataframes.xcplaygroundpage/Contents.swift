@@ -1,21 +1,19 @@
-
 /*:
- ## Transform columns in a dataframe
+ ## Joining dataframes
  
- We can now transform location into distance to build the first feature of the app: locate the nearest parking meters to a given location.
- 
- We compute those meters with the `closestParking(to:in:limit:)` function.
+We can join dataframes to combine information from different data sets.
  
  */
 
 import CoreLocation
 import TabularData
 
+var filteredPolicies = try filterPolicies()
+
 var meters = try DataFrame(
     contentsOfCSVFile: metersURL,
     columns: ["POST_ID", "STREET_NAME", "STREET_NUM", "LATITUDE", "LONGITUDE"]
 )
-
 meters.combineColumns("LATITUDE", "LONGITUDE", into: "location") { (latitude: Double?, longitude: Double?) -> CLLocation? in
     guard let latitude = latitude, let longitude = longitude else {
         return nil
@@ -23,6 +21,8 @@ meters.combineColumns("LATITUDE", "LONGITUDE", into: "location") { (latitude: Do
 
     return CLLocation(latitude: latitude, longitude: longitude)
 }
+filteredPolicies.renameColumn("PostID", to: "POST_ID")  // Rename to match column name
+let activeMeters = filteredPolicies.joined(meters, on: ("POST_ID"))
 
 func closestParking(to location: CLLocation, in meters: DataFrame, limit: Int) -> DataFrame.Slice {
     var closesMeters = meters
@@ -34,15 +34,12 @@ func closestParking(to location: CLLocation, in meters: DataFrame, limit: Int) -
 }
 
 let appleStoreLocation = CLLocation(latitude: 37.788675, longitude: -122.407129)
-let myAppleStoreParking = closestParking(to: appleStoreLocation, in: meters, limit: 5)
+let myAppleStoreParking = closestParking(to: appleStoreLocation, in: activeMeters, limit: 5)
 
 print(myAppleStoreParking)
 
 /*:
 
-This lets us find the 5 closest parking meters to a given location.
- 
-Sometimes though, we would like to know what are the streets with the most parking slots. We will make that feature next.
  
   [< Previous](@previous)                            [Next >](@next)
  */

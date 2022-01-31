@@ -5,11 +5,8 @@ We can create the next feature, which is locating the street with the most parki
  
  */
 
-
 import CoreLocation
 import TabularData
-
-let filteredPolicies = try filterPolicies()
 
 var meters = try DataFrame(
     contentsOfCSVFile: metersURL,

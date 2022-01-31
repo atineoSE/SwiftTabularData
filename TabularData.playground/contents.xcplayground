@@ -11,5 +11,6 @@
         <page name='Combining columns in a dataframes'/>
         <page name='Transform columns in a dataframe'/>
         <page name='Grouping results by column value'/>
+        <page name='Joining dataframes'/>
     </pages>
 </playground>

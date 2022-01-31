@@ -12,11 +12,8 @@
  
  */
 
-
 import CoreLocation
 import TabularData
-
-let filteredPolicies = try filterPolicies()
 
 var meters = try DataFrame(
     contentsOfCSVFile: metersURL,
