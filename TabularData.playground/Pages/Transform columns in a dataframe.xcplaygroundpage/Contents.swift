@@ -30,6 +30,10 @@ func closestParking(to location: CLLocation, in meters: DataFrame, limit: Int) -
         meterLocation.distance(from: location)
     }
     closesMeters.renameColumn("location", to: "distance")
+    
+    // Summary of numerical column
+    print(closesMeters.summary(of: "distance"))
+    
     return closesMeters.sorted(on: "distance", order: .ascending)[..<limit]
 }
 
@@ -37,6 +41,8 @@ let appleStoreLocation = CLLocation(latitude: 37.788675, longitude: -122.407129)
 let myAppleStoreParking = closestParking(to: appleStoreLocation, in: meters, limit: 5)
 
 print(myAppleStoreParking)
+
+
 
 /*:
 

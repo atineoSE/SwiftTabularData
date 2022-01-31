@@ -22,6 +22,9 @@ var meters = try DataFrame(
 
 print(meters.description(options: formattingOptions))
 
+// Summary of categorical column
+print(meters.summary(of: "STREET_NAME"))
+
 meters.combineColumns("LATITUDE", "LONGITUDE", into: "location") { (latitude: Double?, longitude: Double?) -> CLLocation? in
     guard let latitude = latitude, let longitude = longitude else {
         return nil
